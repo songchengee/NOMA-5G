@@ -13,6 +13,7 @@ n = 3; %length of codeword
 data = randi([0 1], 1, N);
 
 %encode data
+%encode each bits one by one and generate a new codeword called 'enc_data'
 for mm = 1:length(data)
     enc_bits = encode(data(mm),n,k,'hamming/binary');
     for ii = 1:n
